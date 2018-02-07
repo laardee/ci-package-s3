@@ -6,7 +6,7 @@ services:
   - docker
 
 before_install:
-- docker pull laardee/serverless
+  - docker pull laardee/serverless:1.26.0
 
 script:
-- docker run -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -v $(pwd):/src laardee/serverless /bin/sh -c "sls package"
+  - docker run -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY -v $(pwd):/src laardee/serverless:1.26.0 /bin/sh -c "cd src && sls package"
