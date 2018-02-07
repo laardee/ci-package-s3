@@ -1,0 +1,23 @@
+{
+  "name": "ci-package-s3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "package": "sls package && node upload.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laardee/ci-package-s3.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laardee/ci-package-s3/issues"
+  },
+  "homepage": "https://github.com/laardee/ci-package-s3#readme",
+  "devDependencies": {
+    "aws-sdk": "^2.190.0"
+  }
+}
